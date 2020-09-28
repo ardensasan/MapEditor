@@ -1,0 +1,10 @@
+D:\Dev\MapEditor\MapEditor\bin\Debug\MapEditor.exe.config
+D:\Dev\MapEditor\MapEditor\bin\Debug\MapEditor.exe
+D:\Dev\MapEditor\MapEditor\bin\Debug\MapEditor.pdb
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.Properties.Resources.resources
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.csproj.GenerateResource.cache
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.csproj.CoreCompileInputs.cache
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.exe
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.pdb
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.MapEditor.resources
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.csprojAssemblyReference.cache
