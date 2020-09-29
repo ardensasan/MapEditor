@@ -23,13 +23,16 @@ namespace MapEditor
         private int[,] map;
         private string[] numbers;
         private int[] coordinates = { 0, 0 };
+        Bitmap bg, tile01;
         private int counter = 0;
+        private int currentTileNum = 0;
         public form_MapEditor()
         {
             InitializeComponent();
             cmbox_xDimension.SelectedIndex = 0;
             cmbox_yDimension.SelectedIndex = 0;
-
+            bg = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\bg.png");
+            tile01 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile01.png");
         }
 
         private void MapEditor_Load(object sender, EventArgs e)
@@ -64,6 +67,14 @@ namespace MapEditor
             Panel panel = sender as Panel;
             panel_currentTile.BackgroundImage = panel.BackgroundImage;
             tp = new TileParser();
+            numbers = Regex.Split(panel.Name, @"\D+");
+            foreach (string value in numbers)
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    currentTileNum = int.Parse(value);
+                }
+            }
             panelValue = tp.TileToInt(panel);
         }
 
@@ -75,6 +86,7 @@ namespace MapEditor
                 x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
                 y = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
                 map = mp.GenerateMapArray(x,y);
+                hscroll_map.Maximum = x - 23;
             }
             catch (Exception ex)
             {
@@ -90,41 +102,37 @@ namespace MapEditor
         public void updateArray(int i,int j)
         {
             i += hscroll_map.Value;
-            map[i,j] = 1;
+            map[i,j] = currentTileNum;
         }
         private void hscroll_map_Scroll(object sender, ScrollEventArgs e)
         {
             int hscrollValue = Int32.Parse(hscroll_map.Value.ToString());
-            string[] numbers;
-            int[] coordinates = { 0, 0 };
-            int number,counter = 0;
+            label1.Text = hscroll_map.Value.ToString();
+            counter = 0;
             foreach (Panel panel in pList)
             {
-                  Console.WriteLine(panel.Name);
                 counter = 0;
                 numbers = Regex.Split(panel.Name, @"\D+");
                 foreach (string value in numbers)
                 {
                     if (!string.IsNullOrEmpty(value))
                     {
-                        number = int.Parse(value);
-                        coordinates[counter] = number;
+                        coordinates[counter] = int.Parse(value);
                         counter++;
                     }
                 }
                 counter = 0;
-                if (map[coordinates[0]+ hscrollValue, coordinates[1]] == 0)
-                {
-                    Console.WriteLine("{0},{0}", coordinates[0], coordinates[1]);
-                    panel.BackColor = Color.Black;
-                    panel.BackgroundImage = null;
-                }
-                else if (map[coordinates[0] + hscrollValue, coordinates[1]] == 1)
-                {
-                    panel.BackColor = Color.White;
-                }
+                tp.IntToTile(panel, coordinates[0]+hscrollValue, coordinates[1],map, this);
+                //if (map[coordinates[0]+ hscrollValue, coordinates[1]] == 0)
+                //{
+                //    panel.BackgroundImage = bg;
+                //    //panel.BackgroundImage = panel_bg.BackgroundImage;
+                //}
+                //else if (map[coordinates[0] + hscrollValue, coordinates[1]] == 1)
+                //{
+                //    panel.BackgroundImage = tile01;
+                //}
             }
-            label1.Text = hscroll_map.Value.ToString();
         }
     }
 }

@@ -41,9 +41,9 @@ namespace MapEditor
                     panel = new Panel();
                     panel.Size = new Size(32, 32);
                     panel.Location = new Point(xLocation, yLocation);
-                    panel.BackColor = Color.White;
+                    panel.BackColor = Color.Black;
                     panel.Name = "panel_" + x.ToString() + "_" + y.ToString();
-                    panel.Click += panel_Click;
+                    panel.Click += map_Panel_Click;
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     mapEditorForm.Controls.Add(panel);
                     pList.Add(panel);
@@ -51,7 +51,7 @@ namespace MapEditor
             }
             return pList;
         }
-        private void panel_Click(object sender, EventArgs e)
+        private void map_Panel_Click(object sender, EventArgs e)
         {
             Panel panel = sender as Panel;
             panel.BackColor = Color.Black;

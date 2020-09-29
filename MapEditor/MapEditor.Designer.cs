@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_MapEditor));
-            this.panel_tile06 = new System.Windows.Forms.Panel();
-            this.panel_tile05 = new System.Windows.Forms.Panel();
-            this.panel_tile04 = new System.Windows.Forms.Panel();
-            this.panel_tile03 = new System.Windows.Forms.Panel();
-            this.panel_tile02 = new System.Windows.Forms.Panel();
-            this.panel_tile01 = new System.Windows.Forms.Panel();
-            this.panel_bg = new System.Windows.Forms.Panel();
+            this.panel_tile6 = new System.Windows.Forms.Panel();
+            this.panel_tile5 = new System.Windows.Forms.Panel();
+            this.panel_tile4 = new System.Windows.Forms.Panel();
+            this.panel_tile3 = new System.Windows.Forms.Panel();
+            this.panel_tile2 = new System.Windows.Forms.Panel();
+            this.panel_tile1 = new System.Windows.Forms.Panel();
+            this.panel_tile0 = new System.Windows.Forms.Panel();
             this.panel_tile13 = new System.Windows.Forms.Panel();
             this.panel_tile12 = new System.Windows.Forms.Panel();
             this.panel_tile11 = new System.Windows.Forms.Panel();
             this.panel_tile10 = new System.Windows.Forms.Panel();
-            this.panel_tile09 = new System.Windows.Forms.Panel();
-            this.panel_tile08 = new System.Windows.Forms.Panel();
-            this.panel_tile07 = new System.Windows.Forms.Panel();
+            this.panel_tile9 = new System.Windows.Forms.Panel();
+            this.panel_tile8 = new System.Windows.Forms.Panel();
+            this.panel_tile7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.vscroll_map = new System.Windows.Forms.VScrollBar();
             this.hscroll_map = new System.Windows.Forms.HScrollBar();
@@ -54,81 +54,81 @@
             this.lbl_dimensions = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // panel_tile06
+            // panel_tile6
             // 
-            this.panel_tile06.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile06.BackgroundImage")));
-            this.panel_tile06.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile06.Location = new System.Drawing.Point(472, 18);
-            this.panel_tile06.Name = "panel_tile06";
-            this.panel_tile06.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile06.TabIndex = 5;
-            this.panel_tile06.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile6.BackgroundImage")));
+            this.panel_tile6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile6.Location = new System.Drawing.Point(472, 18);
+            this.panel_tile6.Name = "panel_tile6";
+            this.panel_tile6.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile6.TabIndex = 5;
+            this.panel_tile6.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile05
+            // panel_tile5
             // 
-            this.panel_tile05.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile05.BackgroundImage")));
-            this.panel_tile05.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile05.Location = new System.Drawing.Point(434, 18);
-            this.panel_tile05.Name = "panel_tile05";
-            this.panel_tile05.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile05.TabIndex = 6;
-            this.panel_tile05.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile5.BackgroundImage")));
+            this.panel_tile5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile5.Location = new System.Drawing.Point(434, 18);
+            this.panel_tile5.Name = "panel_tile5";
+            this.panel_tile5.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile5.TabIndex = 6;
+            this.panel_tile5.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile04
+            // panel_tile4
             // 
-            this.panel_tile04.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile04.BackgroundImage")));
-            this.panel_tile04.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile04.Location = new System.Drawing.Point(396, 18);
-            this.panel_tile04.Name = "panel_tile04";
-            this.panel_tile04.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile04.TabIndex = 7;
-            this.panel_tile04.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile4.BackgroundImage")));
+            this.panel_tile4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile4.Location = new System.Drawing.Point(396, 18);
+            this.panel_tile4.Name = "panel_tile4";
+            this.panel_tile4.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile4.TabIndex = 7;
+            this.panel_tile4.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile03
+            // panel_tile3
             // 
-            this.panel_tile03.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile03.BackgroundImage")));
-            this.panel_tile03.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile03.Location = new System.Drawing.Point(358, 18);
-            this.panel_tile03.Name = "panel_tile03";
-            this.panel_tile03.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile03.TabIndex = 6;
-            this.panel_tile03.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile3.BackgroundImage")));
+            this.panel_tile3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile3.Location = new System.Drawing.Point(358, 18);
+            this.panel_tile3.Name = "panel_tile3";
+            this.panel_tile3.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile3.TabIndex = 6;
+            this.panel_tile3.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile02
+            // panel_tile2
             // 
-            this.panel_tile02.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile02.BackgroundImage")));
-            this.panel_tile02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile02.Location = new System.Drawing.Point(320, 18);
-            this.panel_tile02.Name = "panel_tile02";
-            this.panel_tile02.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile02.TabIndex = 6;
-            this.panel_tile02.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile2.BackgroundImage")));
+            this.panel_tile2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile2.Location = new System.Drawing.Point(320, 18);
+            this.panel_tile2.Name = "panel_tile2";
+            this.panel_tile2.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile2.TabIndex = 6;
+            this.panel_tile2.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile01
+            // panel_tile1
             // 
-            this.panel_tile01.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile01.BackgroundImage")));
-            this.panel_tile01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile01.Location = new System.Drawing.Point(282, 18);
-            this.panel_tile01.Name = "panel_tile01";
-            this.panel_tile01.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile01.TabIndex = 6;
-            this.panel_tile01.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile1.BackgroundImage")));
+            this.panel_tile1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile1.Location = new System.Drawing.Point(282, 18);
+            this.panel_tile1.Name = "panel_tile1";
+            this.panel_tile1.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile1.TabIndex = 6;
+            this.panel_tile1.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_bg
+            // panel_tile0
             // 
-            this.panel_bg.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_bg.BackgroundImage")));
-            this.panel_bg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_bg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_bg.Location = new System.Drawing.Point(244, 18);
-            this.panel_bg.Name = "panel_bg";
-            this.panel_bg.Size = new System.Drawing.Size(32, 32);
-            this.panel_bg.TabIndex = 6;
-            this.panel_bg.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile0.BackgroundImage")));
+            this.panel_tile0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile0.Location = new System.Drawing.Point(244, 18);
+            this.panel_tile0.Name = "panel_tile0";
+            this.panel_tile0.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile0.TabIndex = 6;
+            this.panel_tile0.Click += new System.EventHandler(this.panel_tile_Click);
             // 
             // panel_tile13
             // 
@@ -174,37 +174,37 @@
             this.panel_tile10.TabIndex = 6;
             this.panel_tile10.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile09
+            // panel_tile9
             // 
-            this.panel_tile09.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile09.BackgroundImage")));
-            this.panel_tile09.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile09.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile09.Location = new System.Drawing.Point(586, 18);
-            this.panel_tile09.Name = "panel_tile09";
-            this.panel_tile09.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile09.TabIndex = 6;
-            this.panel_tile09.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile9.BackgroundImage")));
+            this.panel_tile9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile9.Location = new System.Drawing.Point(586, 18);
+            this.panel_tile9.Name = "panel_tile9";
+            this.panel_tile9.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile9.TabIndex = 6;
+            this.panel_tile9.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile08
+            // panel_tile8
             // 
-            this.panel_tile08.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile08.BackgroundImage")));
-            this.panel_tile08.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile08.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile08.Location = new System.Drawing.Point(548, 18);
-            this.panel_tile08.Name = "panel_tile08";
-            this.panel_tile08.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile08.TabIndex = 6;
-            this.panel_tile08.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile8.BackgroundImage")));
+            this.panel_tile8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_tile8.Location = new System.Drawing.Point(548, 18);
+            this.panel_tile8.Name = "panel_tile8";
+            this.panel_tile8.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile8.TabIndex = 6;
+            this.panel_tile8.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // panel_tile07
+            // panel_tile7
             // 
-            this.panel_tile07.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile07.BackgroundImage")));
-            this.panel_tile07.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile07.Location = new System.Drawing.Point(510, 18);
-            this.panel_tile07.Name = "panel_tile07";
-            this.panel_tile07.Size = new System.Drawing.Size(32, 32);
-            this.panel_tile07.TabIndex = 6;
-            this.panel_tile07.Click += new System.EventHandler(this.panel_tile_Click);
+            this.panel_tile7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile7.BackgroundImage")));
+            this.panel_tile7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_tile7.Location = new System.Drawing.Point(510, 18);
+            this.panel_tile7.Name = "panel_tile7";
+            this.panel_tile7.Size = new System.Drawing.Size(32, 32);
+            this.panel_tile7.TabIndex = 6;
+            this.panel_tile7.Click += new System.EventHandler(this.panel_tile_Click);
             // 
             // label1
             // 
@@ -329,20 +329,20 @@
             this.Controls.Add(this.hscroll_map);
             this.Controls.Add(this.vscroll_map);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel_tile07);
-            this.Controls.Add(this.panel_tile08);
-            this.Controls.Add(this.panel_tile09);
+            this.Controls.Add(this.panel_tile7);
+            this.Controls.Add(this.panel_tile8);
+            this.Controls.Add(this.panel_tile9);
             this.Controls.Add(this.panel_tile10);
             this.Controls.Add(this.panel_tile11);
             this.Controls.Add(this.panel_tile12);
             this.Controls.Add(this.panel_tile13);
-            this.Controls.Add(this.panel_bg);
-            this.Controls.Add(this.panel_tile01);
-            this.Controls.Add(this.panel_tile02);
-            this.Controls.Add(this.panel_tile03);
-            this.Controls.Add(this.panel_tile04);
-            this.Controls.Add(this.panel_tile05);
-            this.Controls.Add(this.panel_tile06);
+            this.Controls.Add(this.panel_tile0);
+            this.Controls.Add(this.panel_tile1);
+            this.Controls.Add(this.panel_tile2);
+            this.Controls.Add(this.panel_tile3);
+            this.Controls.Add(this.panel_tile4);
+            this.Controls.Add(this.panel_tile5);
+            this.Controls.Add(this.panel_tile6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_MapEditor";
             this.Text = "Form1";
@@ -353,20 +353,20 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_tile06;
-        private System.Windows.Forms.Panel panel_tile05;
-        private System.Windows.Forms.Panel panel_tile04;
-        private System.Windows.Forms.Panel panel_tile03;
-        private System.Windows.Forms.Panel panel_tile02;
-        private System.Windows.Forms.Panel panel_tile01;
-        private System.Windows.Forms.Panel panel_bg;
+        private System.Windows.Forms.Panel panel_tile6;
+        private System.Windows.Forms.Panel panel_tile5;
+        private System.Windows.Forms.Panel panel_tile4;
+        private System.Windows.Forms.Panel panel_tile3;
+        private System.Windows.Forms.Panel panel_tile2;
+        private System.Windows.Forms.Panel panel_tile1;
+        private System.Windows.Forms.Panel panel_tile0;
         private System.Windows.Forms.Panel panel_tile13;
         private System.Windows.Forms.Panel panel_tile12;
         private System.Windows.Forms.Panel panel_tile11;
         private System.Windows.Forms.Panel panel_tile10;
-        private System.Windows.Forms.Panel panel_tile09;
-        private System.Windows.Forms.Panel panel_tile08;
-        private System.Windows.Forms.Panel panel_tile07;
+        private System.Windows.Forms.Panel panel_tile9;
+        private System.Windows.Forms.Panel panel_tile8;
+        private System.Windows.Forms.Panel panel_tile7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.VScrollBar vscroll_map;
         private System.Windows.Forms.HScrollBar hscroll_map;

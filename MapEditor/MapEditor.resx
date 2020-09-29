@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel_tile06.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAKhJREFUOE9jMBbR/k8q3rhy/f9pHZPAbAYQB4ZhkoQwSDPcABinq7oVLADjI4vD
@@ -127,28 +127,28 @@
         HwCjJscoVXR0SwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panel_tile05.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADhJREFUOE9j
         MBbR/j+tY9L/jSvX/wexGUgFw8QAZAwVJh6ANHVVt1LmgoE3YDQdDIZ0MIBhwMAAAJSXg08JRZIJAAAA
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="panel_tile04.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAADpJREFUOE9j
         IBUYi2j/37hy/f9pHZP+g9hQYeLBMDEAGUOFiQcgTSAXdFW3DnUDRtPBYEgHVAoD7f8ACmeDT+3bXEEA
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel_tile03.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAEtJREFUOE9j
         MBbR/g/DDOSAaR2T/m9cuZ58Q0AGIBsCFSYedFW3gg0AYbIMAGmi2ACQK8j2wuAwgKJYGCYGIGOoMPEA
         pGkoxwIDAwDOboOCvxiQrQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panel_tile02.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAJ1JREFUOE9j
         MBbR/k8JZti4cv1/GAYJIPPRMTZ5hmkdk/6DcFd1K1gBjI8sDsPY5Cn3gqe5839c2FJC/39NXiVODJLH
@@ -156,14 +156,14 @@
         3QBk74Iw5V5ANxGEQRLoYsgYWZ6gAYTkKfSC/n8AA5XH1cw1IpgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel_tile01.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAEtJREFUOE9j
         IAcYi2j/h2GoEPEApnHjyvX/p3VMIs8AmGayDYBp7qpupcwAEBsqTDyAeQFk+xA3gOIwGOIGIGOoMPEA
         pGkwxYL2fwDz24OCTvrJzQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panel_bg.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile0.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAGQAAABkACAIAAACTFMgWAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAA/7JJREFUeF7swQEBAAAAgJD+r+4IAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -2185,21 +2185,21 @@
         4R4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel_tile09.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAGFJREFUOE9j
         MBbR/k8JhhvQVd36f1rHJAwMEodhkDp0cbABIAZMYuPK9TgxSC26GNgAZM0gPikYxQCwAKkApAnkBZjt
         UGHiweAwADkAocLEg2FiADKGChMPQJqGciwwMAAAtzzoDSh3E0oAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="panel_tile08.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile8.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAF1JREFUOE9j
         MBbR/k8JZuiqbv0PwtM6JoExSBAmhiyOjEHicAM2rlz/HxmDBNHFkDG6ISR7AdkQEJ+BVADSRLEBIFfA
         vUAqGDwGUBwGQ9wAZAwVJh6ANA2mWND+DwA0PugND69cTQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panel_tile07.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="panel_tile7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAJlJREFUOE9j
         MBbR/j+tY9L/jSvX/wexScVwA2CGEMIg9ch8sAHIhoBwV3UrHCOLgzBILbI43AByMYOlhP7/mrxKnBgk
