@@ -52,6 +52,7 @@
             this.cmbox_yDimension = new System.Windows.Forms.ComboBox();
             this.lbl_X = new System.Windows.Forms.Label();
             this.lbl_dimensions = new System.Windows.Forms.Label();
+            this.lbl_file = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel_tile6
@@ -59,7 +60,7 @@
             this.panel_tile6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile6.BackgroundImage")));
             this.panel_tile6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile6.Location = new System.Drawing.Point(472, 18);
+            this.panel_tile6.Location = new System.Drawing.Point(472, 54);
             this.panel_tile6.Name = "panel_tile6";
             this.panel_tile6.Size = new System.Drawing.Size(32, 32);
             this.panel_tile6.TabIndex = 5;
@@ -70,7 +71,7 @@
             this.panel_tile5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile5.BackgroundImage")));
             this.panel_tile5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile5.Location = new System.Drawing.Point(434, 18);
+            this.panel_tile5.Location = new System.Drawing.Point(434, 54);
             this.panel_tile5.Name = "panel_tile5";
             this.panel_tile5.Size = new System.Drawing.Size(32, 32);
             this.panel_tile5.TabIndex = 6;
@@ -81,7 +82,7 @@
             this.panel_tile4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile4.BackgroundImage")));
             this.panel_tile4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile4.Location = new System.Drawing.Point(396, 18);
+            this.panel_tile4.Location = new System.Drawing.Point(396, 54);
             this.panel_tile4.Name = "panel_tile4";
             this.panel_tile4.Size = new System.Drawing.Size(32, 32);
             this.panel_tile4.TabIndex = 7;
@@ -92,7 +93,7 @@
             this.panel_tile3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile3.BackgroundImage")));
             this.panel_tile3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile3.Location = new System.Drawing.Point(358, 18);
+            this.panel_tile3.Location = new System.Drawing.Point(358, 54);
             this.panel_tile3.Name = "panel_tile3";
             this.panel_tile3.Size = new System.Drawing.Size(32, 32);
             this.panel_tile3.TabIndex = 6;
@@ -102,7 +103,7 @@
             // 
             this.panel_tile2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile2.BackgroundImage")));
             this.panel_tile2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile2.Location = new System.Drawing.Point(320, 18);
+            this.panel_tile2.Location = new System.Drawing.Point(320, 54);
             this.panel_tile2.Name = "panel_tile2";
             this.panel_tile2.Size = new System.Drawing.Size(32, 32);
             this.panel_tile2.TabIndex = 6;
@@ -113,7 +114,7 @@
             this.panel_tile1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile1.BackgroundImage")));
             this.panel_tile1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile1.Location = new System.Drawing.Point(282, 18);
+            this.panel_tile1.Location = new System.Drawing.Point(282, 54);
             this.panel_tile1.Name = "panel_tile1";
             this.panel_tile1.Size = new System.Drawing.Size(32, 32);
             this.panel_tile1.TabIndex = 6;
@@ -124,7 +125,7 @@
             this.panel_tile0.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile0.BackgroundImage")));
             this.panel_tile0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile0.Location = new System.Drawing.Point(244, 18);
+            this.panel_tile0.Location = new System.Drawing.Point(244, 54);
             this.panel_tile0.Name = "panel_tile0";
             this.panel_tile0.Size = new System.Drawing.Size(32, 32);
             this.panel_tile0.TabIndex = 6;
@@ -135,7 +136,7 @@
             this.panel_tile13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile13.BackgroundImage")));
             this.panel_tile13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile13.Location = new System.Drawing.Point(738, 18);
+            this.panel_tile13.Location = new System.Drawing.Point(738, 54);
             this.panel_tile13.Name = "panel_tile13";
             this.panel_tile13.Size = new System.Drawing.Size(32, 32);
             this.panel_tile13.TabIndex = 8;
@@ -146,7 +147,7 @@
             this.panel_tile12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile12.BackgroundImage")));
             this.panel_tile12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile12.Location = new System.Drawing.Point(700, 18);
+            this.panel_tile12.Location = new System.Drawing.Point(700, 54);
             this.panel_tile12.Name = "panel_tile12";
             this.panel_tile12.Size = new System.Drawing.Size(32, 32);
             this.panel_tile12.TabIndex = 6;
@@ -157,7 +158,7 @@
             this.panel_tile11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile11.BackgroundImage")));
             this.panel_tile11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile11.Location = new System.Drawing.Point(662, 18);
+            this.panel_tile11.Location = new System.Drawing.Point(662, 54);
             this.panel_tile11.Name = "panel_tile11";
             this.panel_tile11.Size = new System.Drawing.Size(32, 32);
             this.panel_tile11.TabIndex = 6;
@@ -168,7 +169,7 @@
             this.panel_tile10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile10.BackgroundImage")));
             this.panel_tile10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile10.Location = new System.Drawing.Point(624, 18);
+            this.panel_tile10.Location = new System.Drawing.Point(624, 54);
             this.panel_tile10.Name = "panel_tile10";
             this.panel_tile10.Size = new System.Drawing.Size(32, 32);
             this.panel_tile10.TabIndex = 6;
@@ -179,7 +180,7 @@
             this.panel_tile9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile9.BackgroundImage")));
             this.panel_tile9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile9.Location = new System.Drawing.Point(586, 18);
+            this.panel_tile9.Location = new System.Drawing.Point(586, 54);
             this.panel_tile9.Name = "panel_tile9";
             this.panel_tile9.Size = new System.Drawing.Size(32, 32);
             this.panel_tile9.TabIndex = 6;
@@ -190,7 +191,7 @@
             this.panel_tile8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile8.BackgroundImage")));
             this.panel_tile8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_tile8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_tile8.Location = new System.Drawing.Point(548, 18);
+            this.panel_tile8.Location = new System.Drawing.Point(548, 54);
             this.panel_tile8.Name = "panel_tile8";
             this.panel_tile8.Size = new System.Drawing.Size(32, 32);
             this.panel_tile8.TabIndex = 6;
@@ -200,7 +201,7 @@
             // 
             this.panel_tile7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_tile7.BackgroundImage")));
             this.panel_tile7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_tile7.Location = new System.Drawing.Point(510, 18);
+            this.panel_tile7.Location = new System.Drawing.Point(510, 54);
             this.panel_tile7.Name = "panel_tile7";
             this.panel_tile7.Size = new System.Drawing.Size(32, 32);
             this.panel_tile7.TabIndex = 6;
@@ -209,7 +210,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 3);
+            this.label1.Location = new System.Drawing.Point(143, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 10;
@@ -217,27 +218,30 @@
             // 
             // vscroll_map
             // 
-            this.vscroll_map.Location = new System.Drawing.Point(749, 66);
+            this.vscroll_map.LargeChange = 1;
+            this.vscroll_map.Location = new System.Drawing.Point(749, 98);
+            this.vscroll_map.Maximum = 10;
             this.vscroll_map.Name = "vscroll_map";
-            this.vscroll_map.Size = new System.Drawing.Size(21, 470);
+            this.vscroll_map.Size = new System.Drawing.Size(21, 416);
             this.vscroll_map.TabIndex = 11;
+            this.vscroll_map.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scroll_Map);
             // 
             // hscroll_map
             // 
             this.hscroll_map.LargeChange = 1;
-            this.hscroll_map.Location = new System.Drawing.Point(9, 515);
+            this.hscroll_map.Location = new System.Drawing.Point(11, 515);
             this.hscroll_map.Maximum = 10;
             this.hscroll_map.Name = "hscroll_map";
-            this.hscroll_map.Size = new System.Drawing.Size(740, 21);
+            this.hscroll_map.Size = new System.Drawing.Size(738, 21);
             this.hscroll_map.TabIndex = 12;
-            this.hscroll_map.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hscroll_map_Scroll);
+            this.hscroll_map.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scroll_Map);
             // 
             // panel_currentTile
             // 
             this.panel_currentTile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_currentTile.BackgroundImage")));
             this.panel_currentTile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel_currentTile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_currentTile.Location = new System.Drawing.Point(184, 18);
+            this.panel_currentTile.Location = new System.Drawing.Point(184, 54);
             this.panel_currentTile.Name = "panel_currentTile";
             this.panel_currentTile.Size = new System.Drawing.Size(32, 32);
             this.panel_currentTile.TabIndex = 7;
@@ -245,7 +249,7 @@
             // lbl_selected
             // 
             this.lbl_selected.AutoSize = true;
-            this.lbl_selected.Location = new System.Drawing.Point(188, 3);
+            this.lbl_selected.Location = new System.Drawing.Point(188, 39);
             this.lbl_selected.Name = "lbl_selected";
             this.lbl_selected.Size = new System.Drawing.Size(24, 13);
             this.lbl_selected.TabIndex = 13;
@@ -267,11 +271,11 @@
             "400",
             "450",
             "500"});
-            this.cmbox_xDimension.Location = new System.Drawing.Point(9, 29);
+            this.cmbox_xDimension.Location = new System.Drawing.Point(9, 65);
             this.cmbox_xDimension.Name = "cmbox_xDimension";
             this.cmbox_xDimension.Size = new System.Drawing.Size(48, 21);
             this.cmbox_xDimension.TabIndex = 14;
-            this.cmbox_xDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_xDimension_SelectedIndexChanged);
+            this.cmbox_xDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_SelectedIndexChanged);
             // 
             // cmbox_yDimension
             // 
@@ -289,17 +293,17 @@
             "400",
             "450",
             "500"});
-            this.cmbox_yDimension.Location = new System.Drawing.Point(79, 30);
+            this.cmbox_yDimension.Location = new System.Drawing.Point(79, 66);
             this.cmbox_yDimension.Name = "cmbox_yDimension";
             this.cmbox_yDimension.Size = new System.Drawing.Size(48, 21);
             this.cmbox_yDimension.TabIndex = 15;
-            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_yDimension_SelectedIndexChanged);
+            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_SelectedIndexChanged);
             // 
             // lbl_X
             // 
             this.lbl_X.AutoSize = true;
             this.lbl_X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_X.Location = new System.Drawing.Point(60, 30);
+            this.lbl_X.Location = new System.Drawing.Point(60, 66);
             this.lbl_X.Name = "lbl_X";
             this.lbl_X.Size = new System.Drawing.Size(17, 17);
             this.lbl_X.TabIndex = 16;
@@ -309,17 +313,27 @@
             // 
             this.lbl_dimensions.AutoSize = true;
             this.lbl_dimensions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dimensions.Location = new System.Drawing.Point(6, 9);
+            this.lbl_dimensions.Location = new System.Drawing.Point(6, 45);
             this.lbl_dimensions.Name = "lbl_dimensions";
             this.lbl_dimensions.Size = new System.Drawing.Size(81, 17);
             this.lbl_dimensions.TabIndex = 17;
             this.lbl_dimensions.Text = "Dimensions";
+            // 
+            // lbl_file
+            // 
+            this.lbl_file.AutoSize = true;
+            this.lbl_file.Location = new System.Drawing.Point(8, 9);
+            this.lbl_file.Name = "lbl_file";
+            this.lbl_file.Size = new System.Drawing.Size(23, 13);
+            this.lbl_file.TabIndex = 18;
+            this.lbl_file.Text = "File";
             // 
             // form_MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 561);
+            this.Controls.Add(this.lbl_file);
             this.Controls.Add(this.lbl_dimensions);
             this.Controls.Add(this.lbl_X);
             this.Controls.Add(this.cmbox_yDimension);
@@ -376,6 +390,7 @@
         private System.Windows.Forms.Label lbl_X;
         private System.Windows.Forms.Label lbl_dimensions;
         public System.Windows.Forms.Panel panel_currentTile;
+        private System.Windows.Forms.Label lbl_file;
     }
 }
 
