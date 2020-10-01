@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MapEditor
 {
@@ -18,7 +19,8 @@ namespace MapEditor
         private MapArray mp;
         private TileParser tp;
         private PanelParser pp;
-        private int x, y,panelValue = 0;
+        private FileParser fp;
+        private int x=50, y=50,panelValue = 0;
         private int[,] map;
         private string[] numbers;
         private int[] coordinates = { 0, 0 };
@@ -29,44 +31,137 @@ namespace MapEditor
         public form_MapEditor()
         {
             InitializeComponent();
-            cmbox_xDimension.SelectedIndex = 0;
             cmbox_yDimension.SelectedIndex = 0;
+            cmbox_xDimension.SelectedIndex = 0;
+            cmbox_xDimension.SelectedItem = 50;
+            cmbox_yDimension.SelectedItem = 50;
         }
 
         private void MapEditor_Load(object sender, EventArgs e)
         {
-            pList.Clear();
-            pp = new PanelParser();        
-            tp = new TileParser();
-            pList = pp.ParsePanel(this);
+            try
+            {
+                x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
+                pList.Clear();
+                pp = new PanelParser();
+                tp = new TileParser();
+                fp = new FileParser();
+                pList = pp.ParsePanel(this);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void panel_tile_Click(object sender, EventArgs e)
         {
-            Panel panel = sender as Panel;
-            panel_currentTile.BackgroundImage = panel.BackgroundImage;
-            numbers = Regex.Split(panel.Name, @"\D+");
-            foreach (string value in numbers)
+            try
             {
-                if (!string.IsNullOrEmpty(value))
+                Panel panel = sender as Panel;
+                panel_currentTile.BackgroundImage = panel.BackgroundImage;
+                numbers = Regex.Split(panel.Name, @"\D+");
+                foreach (string value in numbers)
                 {
-                    currentTileNum = int.Parse(value);
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        currentTileNum = int.Parse(value);
+                    }
                 }
+                panelValue = tp.TileToInt(panel);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            panelValue = tp.TileToInt(panel);
+
         }
 
         private void cmbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                mp = new MapArray();
                 x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
-                y = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
-                map = mp.GenerateMapArray(x,y);
+                y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
+                mp = new MapArray();
+                map = mp.GenerateMapArray(x, y);
                 hscroll_map.Maximum = x - 23;
                 vscroll_map.Maximum = y - 13;
+                vscroll_map.Value = 0;
+                hscroll_map.Value = 0;
                 scroll_Map(sender,e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_saveFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
+                SaveFileDialog saveFile = new SaveFileDialog();
+                fp.SaveToFile(saveFile, x, y, map);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btn_openFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                int[,] tempMap = fp.OpenFile(openFileDialog);
+                cmbox_xDimension.SelectedItem = tempMap.GetLength(0).ToString();
+                cmbox_yDimension.SelectedItem = tempMap.GetLength(1).ToString();
+                x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                y = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                map = mp.GenerateMapArray(x, y);
+                map = tempMap;
+                hscroll_map.Value = 0;
+                vscroll_map.Value = 0;
+                scroll_Map(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void yawa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
+            try
+            {
+                mp = new MapArray();
+                map = mp.GenerateMapArray(x, y);
+                hscroll_map.Maximum = x - 23;
+                vscroll_map.Maximum = y - 13;
+                scroll_Map(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbox_xDimension_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+            try
+            {
+                mp = new MapArray();
+                map = mp.GenerateMapArray(x, y);
+                hscroll_map.Maximum = x - 23;
+                vscroll_map.Maximum = y - 13;
+                scroll_Map(sender, e);
             }
             catch (Exception ex)
             {
@@ -82,24 +177,33 @@ namespace MapEditor
 
         private void scroll_Map(object sender, EventArgs e)
         {
-            hscrollValue = Int32.Parse(hscroll_map.Value.ToString());
-            vscrollValue = Int32.Parse(vscroll_map.Value.ToString());
-            label1.Text = hscroll_map.Value.ToString();
-            counter = 0;
-            foreach (Panel panel in pList)
+            try
             {
+                hscrollValue = Int32.Parse(hscroll_map.Value.ToString());
+                vscrollValue = Int32.Parse(vscroll_map.Value.ToString());
+                label1.Text = hscroll_map.Value.ToString();
                 counter = 0;
-                numbers = Regex.Split(panel.Name, @"\D+");
-                foreach (string value in numbers)
+                foreach (Panel panel in pList)
                 {
-                    if (!string.IsNullOrEmpty(value))
+                    counter = 0;
+                    numbers = Regex.Split(panel.Name, @"\D+");
+                    foreach (string value in numbers)
                     {
-                        coordinates[counter] = int.Parse(value);
-                        counter++;
+                        if (!string.IsNullOrEmpty(value))
+                        {
+                            coordinates[counter] = int.Parse(value);
+                            counter++;
+                        }
                     }
+                    counter = 0;
+                    Console.WriteLine(map.GetLength(0).ToString());
+                    Console.WriteLine(map.GetLength(1).ToString());
+                    tp.IntToTile(panel, coordinates[0] + hscrollValue, coordinates[1] + vscrollValue, map, this);
                 }
-                counter = 0;
-                tp.IntToTile(panel, coordinates[0] + hscrollValue, coordinates[1] + vscrollValue, map, this);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

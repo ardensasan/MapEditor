@@ -52,7 +52,8 @@
             this.cmbox_yDimension = new System.Windows.Forms.ComboBox();
             this.lbl_X = new System.Windows.Forms.Label();
             this.lbl_dimensions = new System.Windows.Forms.Label();
-            this.lbl_file = new System.Windows.Forms.Label();
+            this.btn_saveFile = new System.Windows.Forms.Button();
+            this.btn_openFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel_tile6
@@ -275,7 +276,7 @@
             this.cmbox_xDimension.Name = "cmbox_xDimension";
             this.cmbox_xDimension.Size = new System.Drawing.Size(48, 21);
             this.cmbox_xDimension.TabIndex = 14;
-            this.cmbox_xDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_SelectedIndexChanged);
+            this.cmbox_xDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_xDimension_SelectedIndexChanged);
             // 
             // cmbox_yDimension
             // 
@@ -293,11 +294,11 @@
             "400",
             "450",
             "500"});
-            this.cmbox_yDimension.Location = new System.Drawing.Point(79, 66);
+            this.cmbox_yDimension.Location = new System.Drawing.Point(79, 65);
             this.cmbox_yDimension.Name = "cmbox_yDimension";
             this.cmbox_yDimension.Size = new System.Drawing.Size(48, 21);
             this.cmbox_yDimension.TabIndex = 15;
-            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.cmbox_SelectedIndexChanged);
+            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.yawa_SelectedIndexChanged);
             // 
             // lbl_X
             // 
@@ -319,21 +320,33 @@
             this.lbl_dimensions.TabIndex = 17;
             this.lbl_dimensions.Text = "Dimensions";
             // 
-            // lbl_file
+            // btn_saveFile
             // 
-            this.lbl_file.AutoSize = true;
-            this.lbl_file.Location = new System.Drawing.Point(8, 9);
-            this.lbl_file.Name = "lbl_file";
-            this.lbl_file.Size = new System.Drawing.Size(23, 13);
-            this.lbl_file.TabIndex = 18;
-            this.lbl_file.Text = "File";
+            this.btn_saveFile.Location = new System.Drawing.Point(695, 12);
+            this.btn_saveFile.Name = "btn_saveFile";
+            this.btn_saveFile.Size = new System.Drawing.Size(75, 23);
+            this.btn_saveFile.TabIndex = 19;
+            this.btn_saveFile.Text = "&Save";
+            this.btn_saveFile.UseVisualStyleBackColor = true;
+            this.btn_saveFile.Click += new System.EventHandler(this.btn_saveFile_Click);
+            // 
+            // btn_openFile
+            // 
+            this.btn_openFile.Location = new System.Drawing.Point(614, 12);
+            this.btn_openFile.Name = "btn_openFile";
+            this.btn_openFile.Size = new System.Drawing.Size(75, 23);
+            this.btn_openFile.TabIndex = 20;
+            this.btn_openFile.Text = "&Open";
+            this.btn_openFile.UseVisualStyleBackColor = true;
+            this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
             // 
             // form_MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 561);
-            this.Controls.Add(this.lbl_file);
+            this.Controls.Add(this.btn_openFile);
+            this.Controls.Add(this.btn_saveFile);
             this.Controls.Add(this.lbl_dimensions);
             this.Controls.Add(this.lbl_X);
             this.Controls.Add(this.cmbox_yDimension);
@@ -390,7 +403,8 @@
         private System.Windows.Forms.Label lbl_X;
         private System.Windows.Forms.Label lbl_dimensions;
         public System.Windows.Forms.Panel panel_currentTile;
-        private System.Windows.Forms.Label lbl_file;
+        private System.Windows.Forms.Button btn_saveFile;
+        private System.Windows.Forms.Button btn_openFile;
     }
 }
 

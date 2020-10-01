@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace MapEditor
 {
-    class PanelParser:Form
+    class PanelParser
     {
         List<Panel> pList = new List<Panel>();
         MapEditor.form_MapEditor mE;
