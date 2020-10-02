@@ -13,7 +13,6 @@ namespace MapEditor
     class TileParser
     {
         private int panelValue;
-        MapEditor.form_MapEditor me;
         Bitmap bg = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\bg.png");
         Bitmap tile01 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile01.png");
         Bitmap tile02 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile02.png");

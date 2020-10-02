@@ -27,12 +27,10 @@ namespace MapEditor
         private int[] coordinates = { 0, 0 };
         private int counter = 0;
         private int currentTileNum = 0;
-        private int hscrollValue;
-        private int vscrollValue;
         public form_MapEditor()
         {
             InitializeComponent();
-            pF = new form_previewForm(map);
+            pp = new PanelParser();
             cmbox_yDimension.SelectedIndex = 0;
             cmbox_xDimension.SelectedIndex = 0;
             cmbox_xDimension.SelectedItem = 50;
@@ -156,6 +154,7 @@ namespace MapEditor
 
         private void btn_preview_Click(object sender, EventArgs e)
         {
+            pF = new form_previewForm(map);
             MessageBox.Show("Map preview may take some time");
             pF.ShowDialog();
         }
@@ -180,38 +179,13 @@ namespace MapEditor
         public void updateArray(int i,int j)
         {
             i += hscroll_map.Value;
+            j += vscroll_map.Value;
             map[i,j] = currentTileNum;
         }
 
         private void scroll_Map(object sender, EventArgs e)
         {
-            try
-            {
-                hscrollValue = Int32.Parse(hscroll_map.Value.ToString());
-                vscrollValue = Int32.Parse(vscroll_map.Value.ToString());
-                label1.Text = hscroll_map.Value.ToString();
-                counter = 0;
-                foreach (Panel panel in pList)
-                {
-                    counter = 0;
-                    numbers = Regex.Split(panel.Name, @"\D+");
-                    foreach (string value in numbers)
-                    {
-                        if (!string.IsNullOrEmpty(value))
-                        {
-                            coordinates[counter] = int.Parse(value);
-                            counter++;
-                        }
-                    }
-                    counter = 0;
-                    tp.IntToTile(panel, coordinates[0] + hscrollValue, coordinates[1] + vscrollValue, map);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            pp.UpdatePanels(hscroll_map.Value, vscroll_map.Value, map, pList);
         }
-
     }
 }

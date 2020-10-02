@@ -18,6 +18,7 @@ namespace MapEditor
         List<Panel> pList = new List<Panel>();
         form_MapEditor mE;
         TileParser tp;
+        private int x, y;
         private int[] coordinates = { 0, 0 };
         private int counter = 0;
         private string[] numbers;
@@ -26,14 +27,14 @@ namespace MapEditor
             mE = mapEditorForm;
             Panel panel;
             int xLocation = 12, yLocation = 98;
-            for (int x = 0; x < xDimension; x++)
+            for (x = 0; x < xDimension; x++)
             {
                 if (x > 0)
                 {
                     xLocation += 32;
                 }
                 yLocation = 98;
-                for (int y = 0; y < yDimension; y++)
+                for (y = 0; y < yDimension; y++)
                 {
                     if (y > 0)
                     {
@@ -56,23 +57,25 @@ namespace MapEditor
         public List<Panel> ParsePanel(form_previewForm previewForm, int xDimension, int yDimension)
         {
             Panel panel;
-            int edge = 12;
-            int xLocation = 0, yLocation = 0;
+            tp = new TileParser();
+            const int EDGE = 12;
+            const int LOCATION = 2;
+            int xLocation = LOCATION, yLocation = LOCATION;
             for (int x = 0; x < xDimension; x++)
             {
                 if (x > 0)
                 {
-                    xLocation += edge;
+                    xLocation += EDGE;
                 }
-                yLocation = 0;
+                yLocation = LOCATION;
                 for (int y = 0; y < yDimension; y++)
                 {
                     if (y > 0)
                     {
-                        yLocation += edge;
+                        yLocation += EDGE;
                     }
                     panel = new Panel();
-                    panel.Size = new Size(edge, edge);
+                    panel.Size = new Size(EDGE, EDGE);
                     panel.Location = new Point(xLocation, yLocation);
                     panel.BackColor = Color.Gray;
                     panel.Name = "panel_" + x.ToString() + "_" + y.ToString();
@@ -84,22 +87,35 @@ namespace MapEditor
             return pList;
         }
 
-        private void DisplayPanelTiles(int hScrollValue,int vScrollValue)
+        public void UpdatePanels(int hScrollValue,int vScrollValue,int[,] m,List<Panel> formPanels)
         {
-            foreach (Panel panel in pList)
+            tp = new TileParser();
+            x = hScrollValue;
+            y = vScrollValue;
+            try
             {
-                counter = 0;
-                numbers = Regex.Split(panel.Name, @"\D+");
-                foreach (string value in numbers)
+                int[] coordinates = { 0, 0 };
+                string[] numbers;
+                int counter = 0;
+                foreach (Panel panel in formPanels)
                 {
-                    if (!string.IsNullOrEmpty(value))
+                    counter = 0;
+                    numbers = Regex.Split(panel.Name, @"\D+");
+                    foreach (string value in numbers)
                     {
-                        coordinates[counter] = int.Parse(value);
-                        counter++;
+                        if (!string.IsNullOrEmpty(value))
+                        {
+                            coordinates[counter] = int.Parse(value);
+                            counter++;
+                        }
                     }
+                    counter = 0;
+                    tp.IntToTile(panel, coordinates[0] + x, coordinates[1] + y, m);
                 }
-                counter = 0;
-                //tp.IntToTile(panel, coordinates[0] + hScrollValue, coordinates[1] + vScrollValue, map, this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

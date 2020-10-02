@@ -384,7 +384,8 @@
             this.Controls.Add(this.panel_tile6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "form_MapEditor";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Map Editor";
             this.Load += new System.EventHandler(this.MapEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

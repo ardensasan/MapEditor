@@ -28,55 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.hScrollBar2 = new System.Windows.Forms.HScrollBar();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.hscroll_preview = new System.Windows.Forms.HScrollBar();
+            this.vscroll_preview = new System.Windows.Forms.VScrollBar();
             this.SuspendLayout();
             // 
-            // label1
+            // hscroll_preview
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(666, 289);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.hscroll_preview.LargeChange = 1;
+            this.hscroll_preview.Location = new System.Drawing.Point(0, 605);
+            this.hscroll_preview.Maximum = 1000;
+            this.hscroll_preview.Name = "hscroll_preview";
+            this.hscroll_preview.Size = new System.Drawing.Size(620, 20);
+            this.hscroll_preview.TabIndex = 2;
+            this.hscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hscroll_preview_Scroll);
             // 
-            // hScrollBar2
+            // vscroll_preview
             // 
-            this.hScrollBar2.Location = new System.Drawing.Point(0, 622);
-            this.hScrollBar2.Name = "hScrollBar2";
-            this.hScrollBar2.Size = new System.Drawing.Size(620, 10);
-            this.hScrollBar2.TabIndex = 2;
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(610, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(10, 600);
-            this.vScrollBar1.TabIndex = 3;
+            this.vscroll_preview.LargeChange = 1;
+            this.vscroll_preview.Location = new System.Drawing.Point(605, 0);
+            this.vscroll_preview.Name = "vscroll_preview";
+            this.vscroll_preview.Size = new System.Drawing.Size(20, 600);
+            this.vscroll_preview.TabIndex = 3;
+            this.vscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vscroll_preview_Scroll);
             // 
             // form_previewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(664, 641);
-            this.Controls.Add(this.vScrollBar1);
-            this.Controls.Add(this.hScrollBar2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(634, 631);
+            this.Controls.Add(this.vscroll_preview);
+            this.Controls.Add(this.hscroll_preview);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "form_previewForm";
-            this.Text = " ";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " Preview";
             this.Load += new System.EventHandler(this.Preview_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.HScrollBar hScrollBar2;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.HScrollBar hscroll_preview;
+        private System.Windows.Forms.VScrollBar vscroll_preview;
     }
 }

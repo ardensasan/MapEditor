@@ -15,48 +15,36 @@ namespace MapEditor
     public partial class form_previewForm : Form
     {
         private int[,] map;
-        private int x,y, xLocation = 0,yLocation = 0;
-        private int edge = 12;
+        private int x,y;
         private List<Panel> pList;
-        private TileParser tp = new TileParser();
         private PanelParser pp = new PanelParser();
+        private TileParser tp = new TileParser();
+
+        private void hscroll_preview_Scroll(object sender, ScrollEventArgs e)
+        {
+            x = hscroll_preview.Value;
+            pp.UpdatePanels(x, y, map, pList);
+        }
+
+        private void vscroll_preview_Scroll(object sender, ScrollEventArgs e)
+        {
+            y = vscroll_preview.Value;
+            pp.UpdatePanels(x, y, map, pList);
+        }
         public form_previewForm(int[,] M)
         {
             InitializeComponent();
             map = M;
-            pList = pp.ParsePanel(this, 50, 50);
         }
 
         private void Preview_Load(object sender, EventArgs e)
         {
-            Panel p;
-            pList = new List<Panel>();
-            try
-            {
-                //int[] coordinates = { 0, 0 };
-                //string[] numbers;
-                //int counter = 0;
-                //foreach (Panel panel in pList)
-                //{
-                //    counter = 0;
-                //    numbers = Regex.Split(panel.Name, @"\D+");
-                //    foreach (string value in numbers)
-                //    {
-                //        if (!string.IsNullOrEmpty(value))
-                //        {
-                //            coordinates[counter] = int.Parse(value);
-                //            counter++;
-                //        }
-                //    }
-                //    counter = 0;
-                //    tp.IntToTile(panel, coordinates[0], coordinates[1], map);
-                //}
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            pList = pp.ParsePanel(this, 50, 50);
+            hscroll_preview.Maximum = map.GetLength(0) - 50;
+            x = hscroll_preview.Value = 0;
+            vscroll_preview.Maximum = map.GetLength(1) - 50;
+            y = vscroll_preview.Value = 0;
+            pp.UpdatePanels(x, y, map, pList);
         }
     }
 }
