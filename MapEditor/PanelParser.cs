@@ -16,25 +16,23 @@ namespace MapEditor
     class PanelParser
     {
         List<Panel> pList = new List<Panel>();
-        MapEditor.form_MapEditor mE;
+        form_MapEditor mE;
         TileParser tp;
         private int[] coordinates = { 0, 0 };
         private int counter = 0;
         private string[] numbers;
-        private int xLocation, yLocation;
-        public List<Panel> ParsePanel(MapEditor.form_MapEditor mapEditorForm)
+        public List<Panel> ParsePanel(form_MapEditor mapEditorForm,int xDimension, int yDimension)
         {
-            mE = mapEditorForm;
             Panel panel;
             int xLocation = 12, yLocation = 98;
-            for (int x = 0; x < 23; x++)
+            for (int x = 0; x < xDimension; x++)
             {
                 if (x > 0)
                 {
                     xLocation += 32;
                 }
                 yLocation = 98;
-                for (int y = 0; y < 13; y++)
+                for (int y = 0; y < yDimension; y++)
                 {
                     if (y > 0)
                     {
@@ -48,6 +46,38 @@ namespace MapEditor
                     panel.Click += map_Panel_Click;
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     mapEditorForm.Controls.Add(panel);
+                    pList.Add(panel);
+                }
+            }
+            return pList;
+        }
+
+        public List<Panel> ParsePanel(form_previewForm previewForm, int xDimension, int yDimension)
+        {
+            Panel panel;
+            int edge = 12;
+            int xLocation = 0, yLocation = 0;
+            for (int x = 0; x < xDimension; x++)
+            {
+                if (x > 0)
+                {
+                    xLocation += edge;
+                }
+                yLocation = 0;
+                for (int y = 0; y < yDimension; y++)
+                {
+                    if (y > 0)
+                    {
+                        yLocation += edge;
+                    }
+                    panel = new Panel();
+                    panel.Size = new Size(edge, edge);
+                    panel.Location = new Point(xLocation, yLocation);
+                    panel.BackColor = Color.Gray;
+                    panel.Name = "panel_" + x.ToString() + "_" + y.ToString();
+                    panel.Click += map_Panel_Click;
+                    panel.BorderStyle = BorderStyle.FixedSingle;
+                    previewForm.Controls.Add(panel);
                     pList.Add(panel);
                 }
             }

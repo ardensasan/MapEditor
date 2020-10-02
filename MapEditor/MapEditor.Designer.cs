@@ -54,6 +54,7 @@
             this.lbl_dimensions = new System.Windows.Forms.Label();
             this.btn_saveFile = new System.Windows.Forms.Button();
             this.btn_openFile = new System.Windows.Forms.Button();
+            this.btn_preview = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel_tile6
@@ -298,7 +299,7 @@
             this.cmbox_yDimension.Name = "cmbox_yDimension";
             this.cmbox_yDimension.Size = new System.Drawing.Size(48, 21);
             this.cmbox_yDimension.TabIndex = 15;
-            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.yawa_SelectedIndexChanged);
+            this.cmbox_yDimension.SelectedIndexChanged += new System.EventHandler(this.yDimension_SelectedIndexChanged);
             // 
             // lbl_X
             // 
@@ -340,11 +341,22 @@
             this.btn_openFile.UseVisualStyleBackColor = true;
             this.btn_openFile.Click += new System.EventHandler(this.btn_openFile_Click);
             // 
+            // btn_preview
+            // 
+            this.btn_preview.Location = new System.Drawing.Point(510, 12);
+            this.btn_preview.Name = "btn_preview";
+            this.btn_preview.Size = new System.Drawing.Size(75, 23);
+            this.btn_preview.TabIndex = 21;
+            this.btn_preview.Text = "&Preview";
+            this.btn_preview.UseVisualStyleBackColor = true;
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
+            // 
             // form_MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 561);
+            this.Controls.Add(this.btn_preview);
             this.Controls.Add(this.btn_openFile);
             this.Controls.Add(this.btn_saveFile);
             this.Controls.Add(this.lbl_dimensions);
@@ -405,6 +417,7 @@
         public System.Windows.Forms.Panel panel_currentTile;
         private System.Windows.Forms.Button btn_saveFile;
         private System.Windows.Forms.Button btn_openFile;
+        private System.Windows.Forms.Button btn_preview;
     }
 }
 

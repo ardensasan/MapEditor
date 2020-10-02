@@ -7,3 +7,4 @@ D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.csproj.CoreCompileInputs.cache
 D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.exe
 D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.pdb
 D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.form_MapEditor.resources
+D:\Dev\MapEditor\MapEditor\obj\Debug\MapEditor.form_previewForm.resources

@@ -28,7 +28,7 @@ namespace MapEditor
         Bitmap tile11 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile11.png");
         Bitmap tile12 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile12.png");
         Bitmap tile13 = new Bitmap(Application.StartupPath + "\\assets\\TinyRooms\\tile13.png");
-        public void IntToTile(Panel panel,int x,int y,int[,] map, MapEditor.form_MapEditor mapEditorForm)
+        public void IntToTile(Panel panel,int x,int y,int[,] map)
         {
             panel.BackgroundImage = null;
             if (map[x, y] == 0)

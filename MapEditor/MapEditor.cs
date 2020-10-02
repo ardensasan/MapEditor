@@ -47,7 +47,7 @@ namespace MapEditor
                 pp = new PanelParser();
                 tp = new TileParser();
                 fp = new FileParser();
-                pList = pp.ParsePanel(this);
+                pList = pp.ParsePanel(this,23,13);
             }
             catch(Exception ex)
             {
@@ -135,9 +135,9 @@ namespace MapEditor
             }
         }
 
-        private void yawa_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbox_xDimension_SelectedIndexChanged(object sender, EventArgs e)
         {
-            y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
+            x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
             try
             {
                 mp = new MapArray();
@@ -152,9 +152,17 @@ namespace MapEditor
             }
         }
 
-        private void cmbox_xDimension_SelectedIndexChanged(object sender, EventArgs e)
+        private void btn_preview_Click(object sender, EventArgs e)
         {
-            x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+            form_previewForm pf = new form_previewForm(map);
+            this.Hide();
+            pf.ShowDialog();
+            this.Show();
+        }
+
+        private void yDimension_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
             try
             {
                 mp = new MapArray();
@@ -196,9 +204,7 @@ namespace MapEditor
                         }
                     }
                     counter = 0;
-                    Console.WriteLine(map.GetLength(0).ToString());
-                    Console.WriteLine(map.GetLength(1).ToString());
-                    tp.IntToTile(panel, coordinates[0] + hscrollValue, coordinates[1] + vscrollValue, map, this);
+                    tp.IntToTile(panel, coordinates[0] + hscrollValue, coordinates[1] + vscrollValue, map);
                 }
             }
             catch(Exception ex)
