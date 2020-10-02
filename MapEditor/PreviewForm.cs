@@ -22,8 +22,9 @@ namespace MapEditor
         private PanelParser pp = new PanelParser();
         public form_previewForm(int[,] M)
         {
-            map = M;
             InitializeComponent();
+            map = M;
+            pList = pp.ParsePanel(this, 50, 50);
         }
 
         private void Preview_Load(object sender, EventArgs e)
@@ -32,27 +33,24 @@ namespace MapEditor
             pList = new List<Panel>();
             try
             {
-                pList = pp.ParsePanel(this, 50, 50);
-                int[] coordinates = { 0, 0 };
-                string[] numbers;
-                int counter = 0;
-                foreach (Panel panel in pList)
-                {
-                    counter = 0;
-                    numbers = Regex.Split(panel.Name, @"\D+");
-                    foreach (string value in numbers)
-                    {
-                        if (!string.IsNullOrEmpty(value))
-                        {
-                            coordinates[counter] = int.Parse(value);
-                            counter++;
-                        }
-                    }
-                    counter = 0;
-                    Console.WriteLine(map.GetLength(0).ToString());
-                    Console.WriteLine(map.GetLength(1).ToString());
-                    tp.IntToTile(panel, coordinates[0], coordinates[1], map);
-                }
+                //int[] coordinates = { 0, 0 };
+                //string[] numbers;
+                //int counter = 0;
+                //foreach (Panel panel in pList)
+                //{
+                //    counter = 0;
+                //    numbers = Regex.Split(panel.Name, @"\D+");
+                //    foreach (string value in numbers)
+                //    {
+                //        if (!string.IsNullOrEmpty(value))
+                //        {
+                //            coordinates[counter] = int.Parse(value);
+                //            counter++;
+                //        }
+                //    }
+                //    counter = 0;
+                //    tp.IntToTile(panel, coordinates[0], coordinates[1], map);
+                //}
             }
             catch (Exception ex)
             {

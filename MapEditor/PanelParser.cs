@@ -23,6 +23,7 @@ namespace MapEditor
         private string[] numbers;
         public List<Panel> ParsePanel(form_MapEditor mapEditorForm,int xDimension, int yDimension)
         {
+            mE = mapEditorForm;
             Panel panel;
             int xLocation = 12, yLocation = 98;
             for (int x = 0; x < xDimension; x++)
@@ -75,7 +76,6 @@ namespace MapEditor
                     panel.Location = new Point(xLocation, yLocation);
                     panel.BackColor = Color.Gray;
                     panel.Name = "panel_" + x.ToString() + "_" + y.ToString();
-                    panel.Click += map_Panel_Click;
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     previewForm.Controls.Add(panel);
                     pList.Add(panel);

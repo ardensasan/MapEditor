@@ -17,6 +17,7 @@ namespace MapEditor
     {
         private List<Panel> pList = new List<Panel>();
         private MapArray mp;
+        private form_previewForm pF;
         private TileParser tp;
         private PanelParser pp;
         private FileParser fp;
@@ -31,6 +32,7 @@ namespace MapEditor
         public form_MapEditor()
         {
             InitializeComponent();
+            pF = new form_previewForm(map);
             cmbox_yDimension.SelectedIndex = 0;
             cmbox_xDimension.SelectedIndex = 0;
             cmbox_xDimension.SelectedItem = 50;
@@ -154,10 +156,8 @@ namespace MapEditor
 
         private void btn_preview_Click(object sender, EventArgs e)
         {
-            form_previewForm pf = new form_previewForm(map);
-            this.Hide();
-            pf.ShowDialog();
-            this.Show();
+            MessageBox.Show("Map preview may take some time");
+            pF.ShowDialog();
         }
 
         private void yDimension_SelectedIndexChanged(object sender, EventArgs e)

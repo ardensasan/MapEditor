@@ -66,7 +66,7 @@
             this.Controls.Add(this.hScrollBar2);
             this.Controls.Add(this.label1);
             this.Name = "form_previewForm";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Preview_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
