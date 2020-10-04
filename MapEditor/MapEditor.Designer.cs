@@ -43,7 +43,6 @@
             this.panel_tile9 = new System.Windows.Forms.Panel();
             this.panel_tile8 = new System.Windows.Forms.Panel();
             this.panel_tile7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.vscroll_map = new System.Windows.Forms.VScrollBar();
             this.hscroll_map = new System.Windows.Forms.HScrollBar();
             this.panel_currentTile = new System.Windows.Forms.Panel();
@@ -55,6 +54,9 @@
             this.btn_saveFile = new System.Windows.Forms.Button();
             this.btn_openFile = new System.Windows.Forms.Button();
             this.btn_preview = new System.Windows.Forms.Button();
+            this.rbutton_click = new System.Windows.Forms.RadioButton();
+            this.rbutton_drag = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel_tile6
@@ -209,15 +211,6 @@
             this.panel_tile7.TabIndex = 6;
             this.panel_tile7.Click += new System.EventHandler(this.panel_tile_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            // 
             // vscroll_map
             // 
             this.vscroll_map.LargeChange = 1;
@@ -351,11 +344,49 @@
             this.btn_preview.UseVisualStyleBackColor = true;
             this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
             // 
+            // rbutton_click
+            // 
+            this.rbutton_click.AutoSize = true;
+            this.rbutton_click.Location = new System.Drawing.Point(59, 18);
+            this.rbutton_click.Name = "rbutton_click";
+            this.rbutton_click.Size = new System.Drawing.Size(48, 17);
+            this.rbutton_click.TabIndex = 22;
+            this.rbutton_click.TabStop = true;
+            this.rbutton_click.Text = "Click";
+            this.rbutton_click.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.rbutton_click.UseVisualStyleBackColor = true;
+            this.rbutton_click.Click += new System.EventHandler(this.rbutton_click_Click);
+            // 
+            // rbutton_drag
+            // 
+            this.rbutton_drag.AutoSize = true;
+            this.rbutton_drag.Location = new System.Drawing.Point(113, 18);
+            this.rbutton_drag.Name = "rbutton_drag";
+            this.rbutton_drag.Size = new System.Drawing.Size(48, 17);
+            this.rbutton_drag.TabIndex = 23;
+            this.rbutton_drag.TabStop = true;
+            this.rbutton_drag.Text = "Drag";
+            this.rbutton_drag.UseVisualStyleBackColor = true;
+            this.rbutton_drag.Click += new System.EventHandler(this.rbutton_drag_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Mode: ";
+            // 
             // form_MapEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.rbutton_drag);
+            this.Controls.Add(this.rbutton_click);
             this.Controls.Add(this.btn_preview);
             this.Controls.Add(this.btn_openFile);
             this.Controls.Add(this.btn_saveFile);
@@ -367,7 +398,6 @@
             this.Controls.Add(this.panel_currentTile);
             this.Controls.Add(this.hscroll_map);
             this.Controls.Add(this.vscroll_map);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_tile7);
             this.Controls.Add(this.panel_tile8);
             this.Controls.Add(this.panel_tile9);
@@ -407,7 +437,6 @@
         private System.Windows.Forms.Panel panel_tile9;
         private System.Windows.Forms.Panel panel_tile8;
         private System.Windows.Forms.Panel panel_tile7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.VScrollBar vscroll_map;
         private System.Windows.Forms.HScrollBar hscroll_map;
         private System.Windows.Forms.Label lbl_selected;
@@ -419,6 +448,9 @@
         private System.Windows.Forms.Button btn_saveFile;
         private System.Windows.Forms.Button btn_openFile;
         private System.Windows.Forms.Button btn_preview;
+        private System.Windows.Forms.RadioButton rbutton_click;
+        private System.Windows.Forms.RadioButton rbutton_drag;
+        private System.Windows.Forms.Label label1;
     }
 }
 

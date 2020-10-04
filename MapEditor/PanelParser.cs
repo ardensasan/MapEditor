@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Timers;
 
 namespace MapEditor
 {
@@ -22,6 +23,7 @@ namespace MapEditor
         private int[] coordinates = { 0, 0 };
         private int counter = 0;
         private string[] numbers;
+        private bool dragMode = false;
         public List<Panel> ParsePanel(form_MapEditor mapEditorForm,int xDimension, int yDimension)
         {
             mE = mapEditorForm;
@@ -46,6 +48,7 @@ namespace MapEditor
                     panel.BackColor = Color.Gray;
                     panel.Name = "panel_" + x.ToString() + "_" + y.ToString();
                     panel.Click += map_Panel_Click;
+                    panel.MouseEnter += new EventHandler(wiew);
                     panel.BorderStyle = BorderStyle.FixedSingle;
                     mapEditorForm.Controls.Add(panel);
                     pList.Add(panel);
@@ -116,6 +119,18 @@ namespace MapEditor
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        public void SetMode(int mode)
+        {
+            dragMode = Convert.ToBoolean(mode);
+        }
+
+        private void wiew(object sender, EventArgs e)
+        {
+            if (dragMode)
+            {
+                map_Panel_Click(sender, e);
             }
         }
 

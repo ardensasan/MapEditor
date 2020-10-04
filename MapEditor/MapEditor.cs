@@ -25,7 +25,6 @@ namespace MapEditor
         private int[,] map;
         private string[] numbers;
         private int[] coordinates = { 0, 0 };
-        private int counter = 0;
         private int currentTileNum = 0;
         public form_MapEditor()
         {
@@ -41,6 +40,7 @@ namespace MapEditor
         {
             try
             {
+                rbutton_click_Click(sender,e);
                 x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
                 y = Int32.Parse(cmbox_yDimension.SelectedItem.ToString());
                 pList.Clear();
@@ -119,15 +119,18 @@ namespace MapEditor
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 int[,] tempMap = fp.OpenFile(openFileDialog);
-                cmbox_xDimension.SelectedItem = tempMap.GetLength(0).ToString();
-                cmbox_yDimension.SelectedItem = tempMap.GetLength(1).ToString();
-                x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
-                y = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
-                map = mp.GenerateMapArray(x, y);
-                map = tempMap;
-                hscroll_map.Value = 0;
-                vscroll_map.Value = 0;
-                scroll_Map(sender, e);
+                if(tempMap != null)
+                {
+                    cmbox_xDimension.SelectedItem = tempMap.GetLength(0).ToString();
+                    cmbox_yDimension.SelectedItem = tempMap.GetLength(1).ToString();
+                    x = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                    y = Int32.Parse(cmbox_xDimension.SelectedItem.ToString());
+                    map = mp.GenerateMapArray(x, y);
+                    map = tempMap;
+                    hscroll_map.Value = 0;
+                    vscroll_map.Value = 0;
+                    scroll_Map(sender, e);
+                }
             }
             catch (Exception ex)
             {
@@ -174,6 +177,20 @@ namespace MapEditor
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void rbutton_drag_Click(object sender, EventArgs e)
+        {
+            rbutton_drag.Checked = true;
+            rbutton_click.Checked = false;
+            pp.SetMode(1);
+        }
+
+        private void rbutton_click_Click(object sender, EventArgs e)
+        {
+            rbutton_drag.Checked = false;
+            rbutton_click.Checked = true;
+            pp.SetMode(0);
         }
 
         public void updateArray(int i,int j)
