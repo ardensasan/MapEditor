@@ -40,7 +40,7 @@
             this.hscroll_preview.Name = "hscroll_preview";
             this.hscroll_preview.Size = new System.Drawing.Size(620, 20);
             this.hscroll_preview.TabIndex = 2;
-            this.hscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hscroll_preview_Scroll);
+            this.hscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scroll_preview);
             // 
             // vscroll_preview
             // 
@@ -49,7 +49,7 @@
             this.vscroll_preview.Name = "vscroll_preview";
             this.vscroll_preview.Size = new System.Drawing.Size(20, 600);
             this.vscroll_preview.TabIndex = 3;
-            this.vscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vscroll_preview_Scroll);
+            this.vscroll_preview.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scroll_preview);
             // 
             // form_previewForm
             // 

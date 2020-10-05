@@ -20,21 +20,60 @@ namespace MapEditor
         private PanelParser pp = new PanelParser();
         private TileParser tp = new TileParser();
 
-        private void hscroll_preview_Scroll(object sender, ScrollEventArgs e)
-        {
-            x = hscroll_preview.Value;
-            pp.UpdatePanels(x, y, map, pList);
-        }
-
-        private void vscroll_preview_Scroll(object sender, ScrollEventArgs e)
-        {
-            y = vscroll_preview.Value;
-            pp.UpdatePanels(x, y, map, pList);
-        }
         public form_previewForm(int[,] M)
         {
             InitializeComponent();
             map = M;
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            try
+            {
+                if (keyData == Keys.Down)
+                {
+                    if (vscroll_preview.Value < vscroll_preview.Maximum)
+                    {
+                        vscroll_preview.Value++;
+                        scroll_preview(null, null);
+                    }
+                }
+                if (keyData == Keys.Down)
+                {
+                    if (vscroll_preview.Value < vscroll_preview.Maximum)
+                    {
+                        vscroll_preview.Value++;
+                        scroll_preview(null, null);
+                    }
+                }
+                if (keyData == Keys.Left)
+                {
+                    if (hscroll_preview.Value > 0)
+                    {
+                        hscroll_preview.Value--;
+                        scroll_preview(null, null);
+                    }
+                }
+                if (keyData == Keys.Right)
+                {
+                    if (hscroll_preview.Value < hscroll_preview.Maximum)
+                    {
+                        hscroll_preview.Value++;
+                        scroll_preview(null, null);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return true;
+        }
+
+        private void scroll_preview(object sender, ScrollEventArgs e)
+        {
+            x = hscroll_preview.Value;
+            y = vscroll_preview.Value;
+            pp.UpdatePanels(x, y, map, pList);
         }
 
         private void Preview_Load(object sender, EventArgs e)

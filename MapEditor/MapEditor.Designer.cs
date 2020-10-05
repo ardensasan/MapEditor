@@ -352,7 +352,7 @@
             this.rbutton_click.Size = new System.Drawing.Size(48, 17);
             this.rbutton_click.TabIndex = 22;
             this.rbutton_click.TabStop = true;
-            this.rbutton_click.Text = "Click";
+            this.rbutton_click.Text = "&Click";
             this.rbutton_click.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.rbutton_click.UseVisualStyleBackColor = true;
             this.rbutton_click.Click += new System.EventHandler(this.rbutton_click_Click);
@@ -365,7 +365,7 @@
             this.rbutton_drag.Size = new System.Drawing.Size(48, 17);
             this.rbutton_drag.TabIndex = 23;
             this.rbutton_drag.TabStop = true;
-            this.rbutton_drag.Text = "Drag";
+            this.rbutton_drag.Text = "&Drag";
             this.rbutton_drag.UseVisualStyleBackColor = true;
             this.rbutton_drag.Click += new System.EventHandler(this.rbutton_drag_Click);
             // 

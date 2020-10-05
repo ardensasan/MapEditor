@@ -204,5 +204,72 @@ namespace MapEditor
         {
             pp.UpdatePanels(hscroll_map.Value, vscroll_map.Value, map, pList);
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            try
+            {
+                if (keyData == Keys.C)
+                {
+                    rbutton_drag.Checked = false;
+                    rbutton_click.Checked = true;
+                    pp.SetMode(0);
+                }
+                if (keyData == Keys.D)
+                {
+                    rbutton_drag.Checked = true;
+                    rbutton_click.Checked = false;
+                    pp.SetMode(1);
+                }
+                if (keyData == Keys.Up)
+                {
+                    if (vscroll_map.Value > 0)
+                    {
+                        vscroll_map.Value--;
+                        scroll_Map(null, null);
+                    }
+                }
+                if (keyData == Keys.Down)
+                {
+                    if (vscroll_map.Value < vscroll_map.Maximum)
+                    {
+                        vscroll_map.Value++;
+                        scroll_Map(null,null);
+                    }
+                }
+                if (keyData == Keys.Left)
+                {
+                    if (hscroll_map.Value > 0)
+                    {
+                        hscroll_map.Value--;
+                        scroll_Map(null, null);
+                    }
+                }
+                if (keyData == Keys.Right)
+                {
+                    if (hscroll_map.Value < hscroll_map.Maximum)
+                    {
+                        hscroll_map.Value++;
+                        scroll_Map(null, null);
+                    }
+                }
+                if (keyData == Keys.S)
+                {
+                    btn_saveFile_Click(null, null);
+                }
+                if (keyData == Keys.O)
+                {
+                    btn_openFile_Click(null, null);
+                }
+                if (keyData == Keys.P)
+                {
+                    btn_preview_Click(null, null);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return true;
+        }
     }
 }
